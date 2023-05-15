@@ -64,7 +64,6 @@ class Quiz:
             "What is the capital of Mexico?": "Mexico City",
             "What is the name of the largest country in the world?": "Russia",
             "What country has the most natural lakes?": "Canada",
-            "What is the capital of Senegal?": "Dakar",
             "What is the name of the tallest mountain in Canada?": "Mount Logan",
             "What country does the Rhine River run through?": "Germany",
             "What is the name of the driest continent on Earth?": "Antarctica",
