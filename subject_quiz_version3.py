@@ -7,6 +7,8 @@ from datetime import date
 def math_quiz():
     # Define questions and answers for math quiz
     questions = {
+
+        # REMINDER TO CHANGE QUESTIONS TO MULTIPLE CHOICE
         "Is -5 an integer?": "Yes",
         "The product of two positive numbers is NOT positive.": "No",
         "Two lines with positive slopes can be perpendicular.": "No",
@@ -23,13 +25,13 @@ def math_quiz():
     shuffle(list(questions.items()))
 
     # Ask each question and check answer
-    for q, a in questions:
-        ans = messagebox.askstring("Question", q)
-        if ans.lower() == a.lower():
-            messagebox.showinfo("Result", "Correct!")
+    for question, correct_answer in questions:
+        answer = messagebox.askstring(f"{question}")
+        if answer.lower() == correct_answer.lower():
+            messagebox.showinfo("Correct!")
             score += 1
         else:
-            messagebox.showinfo("Result", "Incorrect!")
+            messagebox.showinfo(f"Incorrect! The correct answer was {correct_answer}, not {answer}!")
 
     # Show final score
     messagebox.showinfo("Final Score", f"You scored {score} out of {len(questions)}.")
@@ -38,6 +40,8 @@ def math_quiz():
 def history_quiz():
     # Define questions and answers for history quiz
     questions = {
+        
+        # REMINDER TO CHANGE QUESTIONS TO MULTIPLE CHOICE
         "What is considered the largest empire in history?": "The Mongol Empire",
         "Who sent Christopher Columbus to explore the New World?": "King Ferdinand of Spain",
         "Where did Albert Einstein live before moving to the United States?": "Germany",
@@ -54,13 +58,13 @@ def history_quiz():
     shuffle(list(questions.items()))
 
     # Ask each question and check answer
-    for q, a in questions:
-        ans = messagebox.askstring("Question", q)
-        if ans.lower() == a.lower():
-            messagebox.showinfo("Result", "Correct!")
+    for question, correct_answer in questions:
+        answer = messagebox.askstring(f"{question}")
+        if answer.lower() == correct_answer.lower():
+            messagebox.showinfo("Correct!")
             score += 1
         else:
-            messagebox.showinfo("Result", "Incorrect!")
+            messagebox.showinfo(f"Incorrect! The correct answer was {correct_answer}, not {answer}!")
 
     # Show final score
     messagebox.showinfo("Final Score", f"You scored {score} out of {len(questions)}.")
@@ -69,6 +73,9 @@ def history_quiz():
 def science_quiz():
     # Define questions and answers for geography quiz
     questions = {
+
+        # REMINDER TO CHANGE QUESTIONS TO MULTIPLE CHOICE
+
         "What does DNA stand for?": "Deoxyribonucleic acid",
         "How many bones are in the human body?": "206",
         "At what temperature are Celsius and Fahrenheit equal?": "-40",
@@ -86,21 +93,22 @@ def science_quiz():
     shuffle(list(questions.items()))
 
     # Ask each question and check answer
-    for q, a in questions:
-        ans = messagebox.askstring("Question", q)
-        if ans.lower() == a.lower():
-            messagebox.showinfo("Result", "Correct!")
+    for question, correct_answer in questions:
+        answer = messagebox.askstring(f"{question}")
+        if answer.lower() == correct_answer.lower():
+            messagebox.showinfo("Correct!")
             score += 1
         else:
-            messagebox.showinfo("Result", "Incorrect!")
+            messagebox.showinfo(f"Incorrect! The correct answer was {correct_answer}, not {answer}!")
 
     # Show final score
     messagebox.showinfo("Final Score", f"You scored {score} out of {len(questions)}.")
 
 
 def geography_quiz():
-    # Define questions and answers for geography quiz
-    questions = {
+    # Define questions and answers for geography quiz, using a dictionary
+    QUESTIONS = {
+        # REMINDER TO CHANGE QUESTIONS TO MULTIPLE CHOICE
         "What is the name of the tallest mountain in the world?": "Mount Everest",
         "Which country has the largest population in the world?": "China",
         "What is the capital of Mexico?": "Mexico City",
@@ -114,19 +122,19 @@ def geography_quiz():
     }
 
     score = 0
-    shuffle(list(questions.items()))
+    shuffle(list(QUESTIONS.items()))
 
     # Ask each question and check answer
-    for q, a in questions:
-        ans = messagebox.askstring("Question", q)
-        if ans.lower() == a.lower():
-            messagebox.showinfo("Result", "Correct!")
+    for question, correct_answer in QUESTIONS:
+        answer = messagebox.askstring(f"{question}")
+        if answer.lower() == correct_answer.lower():
+            messagebox.showinfo("Correct!")
             score += 1
         else:
-            messagebox.showinfo("Result", "Incorrect!")
+            messagebox.showinfo(f"Incorrect! The correct answer was {correct_answer}, not {answer}!")
 
     # Show final score
-    messagebox.showinfo("Final Score", f"You scored {score} out of {len(questions)}.")
+    messagebox.showinfo("Final Score", f"You scored {score} out of {len(QUESTIONS)}.")
 
 
 def choose_subject():
